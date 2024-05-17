@@ -2,38 +2,25 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('homepage.Home');
-});
+use App\Http\Controllers\MainController;
 
-Route::get('/login', function () {
-    return view('main.login');
-});
+Route::get('/', [MainController::class, 'home']);
 
-Route::get('/Dashboard', function () {
-    return view('sideBar');
-});
+Route::get('/login', [MainController::class, 'login']);
 
-Route::get('/main', function () {
-    return view('main.main', [
-        'header' => 'Dashboard',
-        'contentName' => 'content', 
-    ]);
-});
+Route::get('/Dashboard', [MainController::class, 'dashboard']);
 
-Route::get('/main/transaksi', function () {
-    return view('main.main', [
-        'header' => 'Transaksi',
-        'contentName' => 'transaksi', 
-    ]);
-});
+Route::get('/main', [MainController::class, 'main']);
 
-Route::get('/main/laporan', function () {
-    return view('main.main', [
-        'header' => 'Laporan',
-        'contentName' => 'laporan', 
-    ]);
-});
+Route::get('/main/transaksi', [MainController::class, 'transaksi']);
+
+Route::get('/main/pelanggan', [MainController::class, 'pelanggan']);
+
+Route::get('/main/laporan', [MainController::class, 'laporan']);
+
+
+
+
 
 
 

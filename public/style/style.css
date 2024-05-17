@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* width: 100vw; */
 }
 
 .list-group .link a:hover {
@@ -12,9 +13,10 @@
     transition: 0.4s;
 }
 
-.main,
+.main-content,
 .sidebar {
     background-image: url(../bg/gradient_2.jpg);
+    /* position: fixed; */
 }
 
 /* Content */
@@ -25,8 +27,9 @@
 .firstSide-content-second {
     width: 13em;
     height: 8.4em;
-    background-color: aqua;
+    background-color: #02318b;
     border-radius: 10px;
+    color: white;
 }
 
 .firstSide-content-first p,
@@ -34,19 +37,41 @@
     font-size: 1.2em;
 }
 
-.review-cust {
-    border: 1px solid;
-    width: 974px;
-    margin-left: 81px;
-    height: 20rem;
-    border-radius: 10px;
-    background-color: aqua;
-}
-
 .table-update {
     border-radius: 10px;
     width: 20em;
 }
+
+.review-cust {
+    display: flex;
+    justify-content: center;
+}
+
+.table-review-cust {
+    border-collapse: collapse;
+    width: 973px;
+    text-align: center;
+}
+
+.table-review-cust th {
+    height: 3rem;
+    background-color: #002470;
+    color: #ffffff;
+}
+
+.table-review-cust td {
+    height: 2rem;
+    background-color: #02318b;
+    color: aqua;
+}
+
+.table-review-cust th,
+.table-review-cust td {
+    border: 1px solid #ffffff;
+    width: 134px;
+}
+/* Customer Preview start */
+
 /* Homepage */
 
 .main-header {
@@ -85,8 +110,11 @@
     border-radius: 1em;
 }
 
-td input,
-td select {
+form .table-home {
+    margin-left: 1.5rem;
+}
+.table-home td input,
+.table-home td select {
     width: 11em;
     border-radius: 5px;
     padding: 0 5px;
@@ -95,36 +123,37 @@ td select {
     margin-right: 0.6rem;
 } */
 
-table {
+.table-home table {
     border-collapse: collapse;
     width: 100%;
 }
-td,
-th {
+.table-home td,
+.table-home th {
     padding-bottom: 10px;
 }
 /* tr {
     border-spacing: 0 15px;
 } */
-td button {
+.table-home td button {
     border-radius: 7px;
     width: 5rem;
 }
 
-td label,
-td input,
-td select {
+.table-home td label,
+.table-home td input,
+.table-home td select {
     font-size: 14px;
 }
 
-td label {
+.table-home td label {
     color: #d6e1e6;
 }
 
-/* Form Transaksi */
+/* transaction-start */
 
 .detail-items-struck {
-    margin-left: 2.5rem;
+    display: flex;
+    justify-content: center;
     font-size: 0.8rem;
 }
 
@@ -135,10 +164,291 @@ td label {
 .payment {
     border: 1px solid #ffffff;
     border-radius: 10px;
-    background-color: #3f8fda;
+    background-color: #114cb3;
     width: 25rem;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     height: 2rem;
+}
+
+.submit-button {
+    position: absolute;
+    text-align: center;
+    margin-left: 16.5rem;
+    width: 5rem;
+    background-color: #114cb3;
+    color: #ffffff;
+}
+
+.submit-button:hover,
+.payment:hover {
+    background-color: #02318b;
+}
+
+.table-transaction td input,
+.table-transaction td select {
+    border-radius: 5px;
+    width: 10rem;
+    padding: 0 5px;
+}
+
+.table-transaction {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.table-transaction td,
+.table-transaction td {
+    padding-bottom: 10px;
+}
+
+.transaction {
+    justify-content: center;
+    height: 31rem;
+}
+
+.detail-struck {
+    margin: 3em 5em 2em;
+}
+
+.detail-items-struck-table {
+    width: 20em;
+    gap: 1rem;
+}
+
+.detail-items-struck-table td {
+    padding-bottom: 8px;
+}
+/* transaction-end */
+
+/* Pelanggan start */
+
+.transaction-users {
+    margin-top: 1rem;
+    white-space: nowrap;
+    width: 1101px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+}
+.transaction-users-detail {
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    color: #ffffff;
+    border-collapse: collapse;
+}
+
+.transaction-users-detail th {
+    height: 2rem;
+    width: 10em;
+}
+.transaction-users-detail th,
+.transaction-users-detail td {
+    border: 1px solid #ffffff;
+    padding: 0 2em;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.fitur-users {
+    display: flex;
+    font-size: 13px;
+    gap: 1rem;
+    justify-content: end;
+    align-items: center;
+    margin: 1rem 2em 0 0;
+}
+
+.fitur-users input,
+.fitur-users button {
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.fitur-search button {
+    width: 4rem;
+}
+
+.fitur-date {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Pelanggan end */
+
+/* Laporan Page Start */
+
+.report-content {
+    color: #ffff;
+}
+
+.add-expanse {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.add-expanse a {
+    text-align: center;
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid #ffff;
+    width: 7em;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ffff;
+}
+
+.detail-report-card-items-icon {
+    display: flex;
+}
+
+.detail-report-card-items-icon p {
+    margin: 0;
+}
+
+.detail-report-card-items-value {
+    margin: auto 5px;
+}
+
+.detail-report-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+}
+
+.detail-report {
+    display: flex;
+    justify-content: center;
+}
+
+.detail-report-card-items {
+    border: 1px solid #ffffff;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 15em;
+    padding-left: 1.5em;
+    margin-top: 4em;
+}
+
+/* .detail-report-expense {
+    margin-left: 4em;
+} */
+
+.detail-report-expense-cash {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.detail-report-expense-table th {
+    border: 1px solid #ffff;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: #22642d;
+}
+
+.detail-report-expense-table td {
+    border: 1px solid #ffffff;
+    border-collapse: collapse;
+    font-size: 13px;
+    height: 2.5em;
+    white-space: nowrap;
+}
+.detail-report-expense-table th:not(:first-child) {
+    width: 7.2em;
+}
+
+.detail-report-expense-table td:not(:first-child) {
+    width: 7.2em;
+}
+
+.detail-report-display {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.detail-report-expense-table a {
+    color: white;
+    text-decoration: none;
+}
+
+.detail-report-expense-table a:hover {
+    color: #114cb3;
+}
+
+.detail-report-expense-table {
+    height: 18rem;
+    white-space: nowrap;
+}
+
+.detail-report-expense-table {
+    text-align: center;
+}
+
+.detail-report-cash-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    gap: 7rem;
+}
+
+.detail-report-cash-header a {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.detail-report-cash-content {
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+    margin-top: 0.75rem;
+    font-size: 13px;
+    padding: 1rem;
+}
+
+.detail-report-cash-content table {
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+}
+
+.detail-report-cash-content input {
+    border-radius: 5px;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+.detail-report-cash-content tr {
+    margin-bottom: 1rem;
+}
+
+.detail-report-cash-content button {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    margin-left: 15rem;
+}
+
+.detail-report-cash-content h6 {
+    margin-top: 10px;
+}
+
+.detail-report-cash-content span {
+    border: 1px solid #0000;
+    border-radius: 1em;
+    display: flex;
+    width: 15em;
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+    font-size: 20px;
+    color: #000;
 }

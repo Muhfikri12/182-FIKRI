@@ -38,7 +38,7 @@
       <div class="user-regist ">
         <h5 class="text-center" style="margin: 1em 0 1.5em">Selamat Datang</h5>
         <form action="/submit_form" method="POST">
-          <table class="form">
+          <table class="table-home form">
             <tr>
               <td><label for="fullname">Nama Lengkap</label></td>
               <td><input type="text" id="fullname" name="fullname"></td>

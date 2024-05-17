@@ -1,9 +1,9 @@
 
 <div class="transaction d-flex flex-wrap">
     <div class="form-transaction">
-        <h4 class="text-light" style="margin: 3rem 7rem 2rem ">Detail Transaksi</h4>
+        <h4 class="text-light" style="margin: 3rem 7rem 2rem ">Form Transaksi Items</h4>
         <form action="">
-            <table style="width: 30em; margin-left:7rem;">
+            <table class="table-transaction" style="width: 30em; margin-left:7rem;">
                 <tr>
                     <td><label for="customer_name">Nama Pelanggan</label></td>
                     <td><input type="text" id="customer_name" name="customer_name"></td>
@@ -25,7 +25,7 @@
                    <td><input type="number" id="phone_number" name="phone_number"></td>
                 </tr>
                 <tr>
-                    <td><label for="service-method">Jenis Pelayanan</label></td>
+                    <td><label for="service-method">Pelayanan</label></td>
                     <td>
                         <select name="service-method" id="service-method">
                             <option value="Express">Express</option>
@@ -47,7 +47,7 @@
                    <td><input type="number" id="total" name="total"></td>
                 </tr> 
                 <tr>
-                    <td><label for="payment-method">Jenis Pembayaran</label></td>
+                    <td><label for="payment-method">Pembayaran</label></td>
                     <td>
                         <select name="payment-method" id="payment-method">
                             <option value="done">Lunas</option>
@@ -60,19 +60,24 @@
                     <td><label for="money">Total Uang</label></td>
                    <td><input type="number" id="money" name="money"></td>
                 </tr> 
+                <td><button class="submit-button rounded" type="button"> Input! </button></td>
             </table>
+            
         </form>
     </div>
     {{-- Detail Struk --}}
-    <div class="detail-struk" style="margin: 3rem 5rem 2rem;">
+    <div class="detail-struck">
         {{-- Heading struck --}}
+
         <div class="text-center text-light">
             <h5> aLaundry</h5>
             <p style="font-size: 10px">Dsn. Pasir Kopeah, Rt.05 Rw.04, Dusun. Ciasem, <br> Kecamatan. Pasir Nangka, Kabupaten. Cibeureum, Indonesia, 01243</p>
         </div>
+
         {{-- Detail Items Struck --}}
+        
         <div class="detail-items-struck text-light">
-            <table>
+            <table class="detail-items-struck-table">
                 <tr>
                     <td>Nama Pelanggan</td>
                     <td>: Andini</td>
@@ -120,6 +125,10 @@
                 <tr>
                     <td>Total Kembalian</td>
                     <td>: 25000</td>
+                </tr>
+                <tr>
+                    <td>Sisa Pembayaran</td>
+                    <td>: 0</td>
                 </tr>
             </table>
         </div> 

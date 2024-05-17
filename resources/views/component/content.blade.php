@@ -1,6 +1,6 @@
     {{-- Transaksi --}}
-      <div class="d-flex " style="padding-left: 2rem">
-        <div class="content m-5 mt-5 mb-4">
+      <div class="d-flex gap-5" style="justify-content:center">
+        <div class="content mt-5 mb-4">
           <div class="first-side d-flex gap-5">
             <div class="firstSide-content-first border border-light d-flex" style="padding-left: 1rem">
               <span class="material-symbols-outlined" style="font-size: 4rem; margin-top: 2rem;">
@@ -46,20 +46,100 @@
         </div>
       </div>
       <div class="review-cust">
-        <table class="table table-bordered border-primary rounded ">
+        <table class="table-review-cust">
           <thead>
-            <tr class="text-center bg-opacity-10">
-              <td style="width: 8em"> Nama </td>
-              <td> Alamat </td>
-              <td> Quantity </td>
-              <td style="width: 8em"> Jenis Layanan</td>
-              <td> Harga </td>
-              <td style="width: 10em"> Total </td>
-              <td> Status </td>
-              <td> Tanggal </td>
+            <tr>
+              <th>Nama</th>
+              <th>Alamat</th>
+              <th>Pelayanan</th>
+              <th>Quantity</th>
+              <th>Harga</th>
+              <th>Pembayaran</th>
+              <th>Total</th>
+              <th>Status</th>
             </tr>
           </thead>
+          <tbody>
+            <tr>
+              <td>Muhaimin</td>
+              <td>Cileungsi</td>
+              <td>Express</td>
+              <td>5Kg</td>
+              <td>5000</td>
+              <td>Lunas</td>
+              <td>57000</td>
+              <td>On Progres</td>
+            </tr>
+            <tr>
+              <td>Muhaimin</td>
+              <td>Cileungsi</td>
+              <td>Express</td>
+              <td>5Kg</td>
+              <td>5000</td>
+              <td>Lunas</td>
+              <td>57000</td>
+              <td>On Progres</td>
+            </tr>
+            <tr>
+              <td>Muhaimin</td>
+              <td>Cileungsi</td>
+              <td>Express</td>
+              <td>5Kg</td>
+              <td>5000</td>
+              <td>Lunas</td>
+              <td>57000</td>
+              <td>On Progres</td>
+            </tr>
+            <tr>
+              <td>Muhaimin</td>
+              <td>Cileungsi</td>
+              <td>Express</td>
+              <td>5Kg</td>
+              <td>5000</td>
+              <td>Lunas</td>
+              <td>57000</td>
+              <td>On Progres</td>
+            </tr>
+            <tr>
+              <td>Muhaimin</td>
+              <td>Cileungsi</td>
+              <td>Express</td>
+              <td>5Kg</td>
+              <td>5000</td>
+              <td>Lunas</td>
+              <td>57000</td>
+              <td>On Progres</td>
+            </tr>
+            <tr>
+              <td>Muhaimin</td>
+              <td>Cileungsi</td>
+              <td>Express</td>
+              <td>5Kg</td>
+              <td>5000</td>
+              <td>Lunas</td>
+              <td>57000</td>
+              <td>On Progres</td>
+            </tr>
+            <tr>
+              <td>Muhaimin</td>
+              <td>Cileungsi</td>
+              <td>Express</td>
+              <td>5Kg</td>
+              <td>5000</td>
+              <td>Lunas</td>
+              <td>57000</td>
+              <td>On Progres</td>
+            </tr>
+            <tr>
+              <td>Muhaimin</td>
+              <td>Cileungsi</td>
+              <td>Express</td>
+              <td>5Kg</td>
+              <td>5000</td>
+              <td>Lunas</td>
+              <td>57000</td>
+              <td>On Progres</td>
+            </tr>
+          </tbody>
         </table>
-        
-
       </div>

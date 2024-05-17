@@ -24,9 +24,9 @@
 
   </head>
   <body>
-    <div class="d-flex">
+    <div class="main-display d-flex">
         @yield('sidebar')
-        <div class="header main w-100 rounded" style="margin-left: 0.5rem">
+        <div class="main-content w-100 rounded" style="margin-left: 0.5rem">
             @yield('header')
             @yield('content')
         </div>
