@@ -26,17 +26,17 @@
               <div class="card bg-dark text-white" style="border-radius: 1rem; width: 25rem;">
                 <div class="card-body p-3 text-center ">
       
-                  <div class="mb-md-3 mt-md-2 pb-3">
-      
+                  <form action="{{ route('postlogin') }}" class="mb-md-3 mt-md-2 pb-3" method="POST">
+                    @csrf
                     <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                     <p class="text-white-50 mb-5">Please enter your login and password!</p>
       
                     <div data-mdb-input-init class="form-outline form-white mb-4 mx-5">
-                      <input type="email" id="typeEmailX" class="form-control form-control-md fs-6" placeholder="Enter Your Email" />
+                      <input type="email" name="email" id="typeEmailX" class="form-control form-control-md fs-6" placeholder="Enter Your Email" />
                     </div>
       
                     <div data-mdb-input-init class="form-outline form-white mb-4 mx-5">
-                      <input type="password" id="typePasswordX" class="form-control form-control-md fs-6 " placeholder="Enter Your Password" />
+                      <input type="password" name="password" id="typePasswordX" class="form-control form-control-md fs-6 " placeholder="Enter Your Password" />
                     </div>
       
                     <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
@@ -49,7 +49,7 @@
                       <a href="#!" class="text-white"><i class="fa-lg" style="width: 1.3rem" data-feather="mail"></i></a>
                     </div>
       
-                  </div>
+                  </form>
       
                   <div>
                     <p class="mt-1">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>

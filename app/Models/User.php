@@ -6,6 +6,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Transactions;
+
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
 
 class User extends Authenticatable
 {
@@ -20,6 +24,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'address',
+        'phone_number',
+        'birthplace',
+        'date_of_birth',
+        'gender',
+        'department',
+        'starting_date',
+        'working_period',
+        'roles_id'
     ];
 
     /**
@@ -44,4 +57,36 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transactions::class, 'id_customer');
+
+    }
+
+
+    public function roles()
+    {
+        return $this->belongsTo(Roles::class);
+    }
+
+
+    public function getIntervalDaysAttribute()
+    {
+     if ($this->starting_date === null) {
+            return 0; 
+    }
+    $startDate = Carbon::parse($this->starting_date);
+    $today = Carbon::today();
+    $intervalDays = $startDate->diffInDays($today);
+
+    return $intervalDays;
+    }
+
+
+
+
+   
+    
+
 }
